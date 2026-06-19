@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router";
 import { useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { LanguageProvider } from "./i18n/LanguageProvider";
 import { CartProvider } from "./hooks/useCart";
 import { ToastProvider } from "./hooks/useToast";
@@ -46,6 +47,7 @@ function Layout() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       {!isDashboard && <Footer />}
+      <SpeedInsights />
     </div>
   );
 }
